@@ -120,7 +120,7 @@ jobs:
                   settings.setJavaScriptEnabled(true);
                   settings.setDomStorageEnabled(true);
 
-                  web.loadUrl(file:///android_asset/index.html");
+                  web.loadUrl("file:///android_asset/index.html");
                   setContentView(web);
               }
           }
