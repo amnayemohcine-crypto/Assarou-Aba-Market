@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Assarou Aba Market</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f6f8;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #d1d5db;
+      font-size: 13px;
+    }
+
+    .container {
+      padding: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .welcome {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.06);
+    }
+
+    .welcome h2 {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .welcome p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.06);
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .card:active {
+      transform: scale(.97);
+    }
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #777;
+    }
+
+    .section {
+      margin-top: 20px;
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.06);
+    }
+
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+    }
+
+    .stat span:last-child {
+      font-weight: bold;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 5px;
+      z-index: 20;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #555;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    nav button div {
+      font-size: 21px;
+      margin-bottom: 3px;
+    }
+
+    .content-space {
+      height: 75px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .primary {
+      background: #111827;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Assarou Aba Market</h1>
+    <p>نظام تسيير المحل التجاري</p>
+  </header>
+
+  <main class="container">
+
+    <div class="welcome">
+      <h2>مرحبا بك 👋</h2>
+      <p>من هنا يمكنك تسيير المبيعات، المنتجات، الزبناء والموردين.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card" onclick="showMessage('قسم المنتجات والمخزون')">
+        <div class="icon">📦</div>
+        <h3>المنتجات</h3>
+        <p>المخزون والمنتجات</p>
+      </div>
+
+      <div class="card" onclick="showMessage('قسم المبيعات والفواتير')">
+        <div class="icon">🧾</div>
+        <h3>المبيعات</h3>
+        <p>المبيعات والفواتير</p>
+      </div>
+
+      <div class="card" onclick="showMessage('قسم الزبناء والديون')">
+        <div class="icon">👥</div>
+        <h3>الزبناء</h3>
+        <p>الزبناء والديون</p>
+      </div>
+
+      <div class="card" onclick="showMessage('قسم الموردين والمشتريات')">
+        <div class="icon">🚚</div>
+        <h3>الموردين</h3>
+        <p>الموردين والمشتريات</p>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2>📊 ملخص النشاط</h2>
+
+      <div class="stat">
+        <span>مبيعات اليوم</span>
+        <span>0 DH</span>
+      </div>
+
+      <div class="stat">
+        <span>المبالغ المستحقة</span>
+        <span>0 DH</span>
+      </div>
+
+      <div class="stat">
+        <span>عدد المنتجات</span>
+        <span>0</span>
+      </div>
+
+      <div class="stat">
+        <span>عدد الزبناء</span>
+        <span>0</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>⚡ إجراءات سريعة</h2>
+
+      <button class="primary" onclick="showMessage('سيتم إنشاء فاتورة جديدة هنا')">
+        + إنشاء فاتورة جديدة
+      </button>
+    </div>
+
+    <div class="content-space"></div>
+
+  </main>
+
+  <nav>
+    <button onclick="showMessage('الرئيسية')">
+      <div>🏠</div>
+      الرئيسية
+    </button>
+
+    <button onclick="showMessage('المبيعات')">
+      <div>🧾</div>
+      المبيعات
+    </button>
+
+    <button onclick="showMessage('المنتجات')">
+      <div>📦</div>
+      المنتجات
+    </button>
+
+    <button onclick="showMessage('الزبناء')">
+      <div>👥</div>
+      الزبناء
+    </button>
+
+    <button onclick="showMessage('الإعدادات')">
+      <div>⚙️</div>
+      الإعدادات
+    </button>
+  </nav>
+
+  <script>
+    function showMessage(message) {
+      alert(message);
+    }
+
+    console.log("Assarou Aba Market started successfully");
+  </script>
+
+</body>
+</html>
