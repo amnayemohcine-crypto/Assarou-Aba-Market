@@ -1,289 +1,78 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Assarou Aba Market</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #f5f6f8;
-      color: #222;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 18px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      font-size: 22px;
-    }
-
-    header p {
-      margin-top: 5px;
-      color: #d1d5db;
-      font-size: 13px;
-    }
-
-    .container {
-      padding: 15px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .welcome {
-      background: white;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 15px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.06);
-    }
-
-    .welcome h2 {
-      font-size: 20px;
-      margin-bottom: 7px;
-    }
-
-    .welcome p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.06);
-      cursor: pointer;
-      transition: .2s;
-    }
-
-    .card:active {
-      transform: scale(.97);
-    }
-
-    .icon {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    .card p {
-      font-size: 12px;
-      color: #777;
-    }
-
-    .section {
-      margin-top: 20px;
-      background: white;
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.06);
-    }
-
-    .section h2 {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-
-    .stat {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .stat:last-child {
-      border-bottom: none;
-    }
-
-    .stat span:last-child {
-      font-weight: bold;
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: white;
-      border-top: 1px solid #ddd;
-      display: flex;
-      justify-content: space-around;
-      padding: 8px 5px;
-      z-index: 20;
-    }
-
-    nav button {
-      background: none;
-      border: none;
-      color: #555;
-      font-size: 11px;
-      cursor: pointer;
-    }
-
-    nav button div {
-      font-size: 21px;
-      margin-bottom: 3px;
-    }
-
-    .content-space {
-      height: 75px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .primary {
-      background: #111827;
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      border-radius: 10px;
-      width: 100%;
-      font-size: 15px;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Assarou Aba Market</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}body{background:#f5f6f8;color:#222;padding-bottom:78px}header{background:#111827;color:#fff;padding:18px;text-align:center;position:sticky;top:0;z-index:10}header h1{font-size:22px}header p{margin-top:5px;color:#d1d5db;font-size:13px}.container{padding:15px;max-width:900px;margin:auto}.welcome,.section,.card,.item{background:#fff;border-radius:16px;box-shadow:0 3px 12px rgba(0,0,0,.06)}.welcome{padding:20px;margin-bottom:15px}.welcome h2{font-size:20px;margin-bottom:7px}.welcome p{color:#666;font-size:14px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{padding:18px;cursor:pointer}.card:active,button:active{transform:scale(.98)}.icon{font-size:28px;margin-bottom:10px}.card h3{font-size:16px;margin-bottom:5px}.card p{font-size:12px;color:#777}.section{margin-top:16px;padding:18px}.section h2{font-size:18px;margin-bottom:15px}.stat,.item{display:flex;justify-content:space-between;align-items:center;padding:13px;margin-bottom:8px}.stat{border-bottom:1px solid #eee;border-radius:0}.stat:last-child{border-bottom:0}.btn{border:0;border-radius:10px;padding:12px 16px;cursor:pointer;font-size:14px}.primary{background:#111827;color:#fff;width:100%}.secondary{background:#e5e7eb;color:#111}.danger{background:#fee2e2;color:#991b1b}.row{display:flex;gap:8px;margin-bottom:10px}.row>*{flex:1}.input{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;font-size:14px;background:#fff}.muted{color:#777;font-size:13px}.empty{text-align:center;color:#888;padding:25px}.page-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.page-title button{width:auto}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:8px 5px;z-index:20}.bottom button{background:none;border:0;color:#555;font-size:11px;cursor:pointer}.bottom button div{font-size:21px;margin-bottom:3px}.tag{font-size:11px;background:#eee;padding:5px 8px;border-radius:20px}.hidden{display:none}.invoice-line{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:10px 0}
+</style>
 </head>
-
 <body>
-
-  <header>
-    <h1>Assarou Aba Market</h1>
-    <p>نظام تسيير المحل التجاري</p>
-  </header>
-
-  <main class="container">
-
-    <div class="welcome">
-      <h2>مرحبا بك 👋</h2>
-      <p>من هنا يمكنك تسيير المبيعات، المنتجات، الزبناء والموردين.</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card" onclick="showMessage('قسم المنتجات والمخزون')">
-        <div class="icon">📦</div>
-        <h3>المنتجات</h3>
-        <p>المخزون والمنتجات</p>
-      </div>
-
-      <div class="card" onclick="showMessage('قسم المبيعات والفواتير')">
-        <div class="icon">🧾</div>
-        <h3>المبيعات</h3>
-        <p>المبيعات والفواتير</p>
-      </div>
-
-      <div class="card" onclick="showMessage('قسم الزبناء والديون')">
-        <div class="icon">👥</div>
-        <h3>الزبناء</h3>
-        <p>الزبناء والديون</p>
-      </div>
-
-      <div class="card" onclick="showMessage('قسم الموردين والمشتريات')">
-        <div class="icon">🚚</div>
-        <h3>الموردين</h3>
-        <p>الموردين والمشتريات</p>
-      </div>
-
-    </div>
-
-    <div class="section">
-      <h2>📊 ملخص النشاط</h2>
-
-      <div class="stat">
-        <span>مبيعات اليوم</span>
-        <span>0 DH</span>
-      </div>
-
-      <div class="stat">
-        <span>المبالغ المستحقة</span>
-        <span>0 DH</span>
-      </div>
-
-      <div class="stat">
-        <span>عدد المنتجات</span>
-        <span>0</span>
-      </div>
-
-      <div class="stat">
-        <span>عدد الزبناء</span>
-        <span>0</span>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>⚡ إجراءات سريعة</h2>
-
-      <button class="primary" onclick="showMessage('سيتم إنشاء فاتورة جديدة هنا')">
-        + إنشاء فاتورة جديدة
-      </button>
-    </div>
-
-    <div class="content-space"></div>
-
-  </main>
-
-  <nav>
-    <button onclick="showMessage('الرئيسية')">
-      <div>🏠</div>
-      الرئيسية
-    </button>
-
-    <button onclick="alert('الزر خدام')">
-      <div>🧾</div>
-      المبيعات
-    </button>
-
-    <button onclick="showMessage('المنتجات')">
-      <div>📦</div>
-      المنتجات
-    </button>
-
-    <button onclick="showMessage('الزبناء')">
-      <div>👥</div>
-      الزبناء
-    </button>
-
-    <button onclick="showMessage('الإعدادات')">
-      <div>⚙️</div>
-      الإعدادات
-    </button>
-  </nav>
-
-  <script>
-    function showMessage(message) {
-      alert(message);
-    }
-
-    console.log("Assarou Aba Market started successfully");
-  </script>
-
-</body>
-</html>
+<header><h1>Assarou Aba Market</h1><p>نظام تسيير المحل التجاري</p></header>
+<main id="app" class="container"></main>
+<nav class="bottom">
+<button onclick="show('home')"><div>🏠</div>الرئيسية</button>
+<button onclick="show('sales')"><div>🧾</div>المبيعات</button>
+<button onclick="show('products')"><div>📦</div>المنتجات</button>
+<button onclick="show('customers')"><div>👥</div>الزبناء</button>
+<button onclick="show('settings')"><div>⚙️</div>الإعدادات</button>
+</nav>
+<script>
+const KEY='assarou_data_v1';
+let data=JSON.parse(localStorage.getItem(KEY)||'{"products":[],"customers":[],"sales":[]}');
+let cart=[];
+function save(){localStorage.setItem(KEY,JSON.stringify(data));}
+function money(n){return Number(n||0).toFixed(2)+' DH'}
+function show(p){
+ if(p==='home') renderHome();
+ if(p==='products') renderProducts();
+ if(p==='customers') renderCustomers();
+ if(p==='sales') renderSales();
+ if(p==='settings') renderSettings();
+ window.scrollTo(0,0);
+}
+function renderHome(){
+ const today=new Date().toISOString().slice(0,10);
+ const sales=data.sales.filter(s=>s.date===today);
+ const total=sales.reduce((a,s)=>a+s.total,0);
+ document.getElementById('app').innerHTML=`
+ <div class="welcome"><h2>مرحبا بك 👋</h2><p>من هنا يمكنك تسيير المبيعات، المنتجات، الزبناء والموردين.</p></div>
+ <div class="cards">
+ <div class="card" onclick="show('products')"><div class="icon">📦</div><h3>المنتجات</h3><p>المخزون والمنتجات</p></div>
+ <div class="card" onclick="show('sales')"><div class="icon">🧾</div><h3>المبيعات</h3><p>المبيعات والفواتير</p></div>
+ <div class="card" onclick="show('customers')"><div class="icon">👥</div><h3>الزبناء</h3><p>الزبناء والديون</p></div>
+ <div class="card" onclick="alert('قسم الموردين سنضيفه في المرحلة التالية')"><div class="icon">🚚</div><h3>الموردين</h3><p>الموردين والمشتريات</p></div></div>
+ <div class="section"><h2>📊 ملخص النشاط</h2>
+ <div class="stat"><span>مبيعات اليوم</span><b>${money(total)}</b></div>
+ <div class="stat"><span>عدد المنتجات</span><b>${data.products.length}</b></div>
+ <div class="stat"><span>عدد الزبناء</span><b>${data.customers.length}</b></div></div>
+ <div class="section"><button class="btn primary" onclick="show('sales')">+ إنشاء فاتورة جديدة</button></div>`;
+}
+function renderProducts(){
+ document.getElementById('app').innerHTML=`<div class="page-title"><h2>📦 المنتجات والمخزون</h2><button class="btn secondary" onclick="show('home')">رجوع</button></div>
+ <div class="section"><h2>إضافة منتج</h2><div class="row"><input id="pn" class="input" placeholder="اسم المنتج"><input id="pp" class="input" type="number" placeholder="الثمن"></div><div class="row"><input id="pq" class="input" type="number" placeholder="الكمية"><button class="btn primary" onclick="addProduct()">حفظ المنتج</button></div></div>
+ <div class="section"><h2>لائحة المنتجات (${data.products.length})</h2>${data.products.length?data.products.map((p,i)=>`<div class="item"><div><b>${esc(p.name)}</b><div class="muted">${money(p.price)} · الكمية: ${p.qty}</div></div><button class="btn danger" onclick="delProduct(${i})">حذف</button></div>`).join(''):'<div class="empty">لا توجد منتجات بعد</div>'}</div>`;
+}
+function addProduct(){let name=document.getElementById('pn').value.trim(),price=+document.getElementById('pp').value,qty=+document.getElementById('pq').value;if(!name||price<0||qty<0){alert('أدخل معلومات صحيحة');return}data.products.push({name,price,qty});save();renderProducts();}
+function delProduct(i){if(confirm('حذف هذا المنتج؟')){data.products.splice(i,1);save();renderProducts();}}
+function renderCustomers(){
+ document.getElementById('app').innerHTML=`<div class="page-title"><h2>👥 الزبناء</h2><button class="btn secondary" onclick="show('home')">رجوع</button></div>
+ <div class="section"><h2>إضافة زبون</h2><div class="row"><input id="cn" class="input" placeholder="اسم الزبون"><input id="ct" class="input" placeholder="الهاتف"></div><button class="btn primary" onclick="addCustomer()">حفظ الزبون</button></div>
+ <div class="section"><h2>لائحة الزبناء (${data.customers.length})</h2>${data.customers.length?data.customers.map((c,i)=>`<div class="item"><div><b>${esc(c.name)}</b><div class="muted">${esc(c.phone||'بدون هاتف')}</div></div><button class="btn danger" onclick="delCustomer(${i})">حذف</button></div>`).join(''):'<div class="empty">لا يوجد زبناء بعد</div>'}</div>`;
+}
+function addCustomer(){let name=document.getElementById('cn').value.trim(),phone=document.getElementById('ct').value.trim();if(!name){alert('أدخل اسم الزبون');return}data.customers.push({name,phone});save();renderCustomers();}
+function delCustomer(i){if(confirm('حذف هذا الزبون؟')){data.customers.splice(i,1);save();renderCustomers();}}
+function renderSales(){
+ document.getElementById('app').innerHTML=`<div class="page-title"><h2>🧾 المبيعات</h2><button class="btn secondary" onclick="show('home')">رجوع</button></div>
+ <div class="section"><h2>إنشاء فاتورة</h2><select id="prod" class="input">${data.products.map((p,i)=>`<option value="${i}">${esc(p.name)} — ${money(p.price)} — مخزون ${p.qty}</option>`).join('')}</select><div class="row" style="margin-top:10px"><input id="sq" class="input" type="number" min="1" value="1"><button class="btn primary" onclick="addToCart()">إضافة للسلة</button></div>${cart.length?cart.map((x,i)=>`<div class="invoice-line"><span>${esc(x.name)} × ${x.qty}</span><b>${money(x.price*x.qty)}</b></div>`).join(''):'<div class="empty">السلة فارغة</div>'}<div class="stat"><span>المجموع</span><b>${money(cart.reduce((a,x)=>a+x.price*x.qty,0))}</b></div><button class="btn primary" onclick="finishSale()" ${cart.length?'':'disabled'}>تأكيد البيع</button></div>`;
+ if(!data.products.length)document.getElementById('app').innerHTML+=`<div class="section"><div class="empty">أضف منتجات أولاً من قسم المنتجات.</div><button class="btn primary" onclick="show('products')">إضافة منتج</button></div>`;
+}
+function addToCart(){let i=+document.getElementById('prod').value,q=+document.getElementById('sq').value,p=data.products[i];if(!p||q<1)return;if(q>p.qty){alert('الكمية غير متوفرة');return}let x=cart.find(a=>a.i===i);if(x)x.qty+=q;else cart.push({i,name:p.name,price:p.price,qty:q});renderSales();}
+function finishSale(){let total=cart.reduce((a,x)=>a+x.price*x.qty,0);cart.forEach(x=>data.products[x.i].qty-=x.qty);data.sales.push({date:new Date().toISOString().slice(0,10),total,items:cart});save();cart=[];alert('تم تسجيل البيع بنجاح');renderSales();}
+function renderSettings(){document.getElementById('app').innerHTML=`<div class="page-title"><h2>⚙️ الإعدادات</h2><button class="btn secondary" onclick="show('home')">رجوع</button></div><div class="section"><h2>البيانات</h2><p class="muted">البيانات محفوظة محلياً داخل الهاتف.</p><br><button class="btn danger" onclick="resetData()">مسح جميع البيانات</button></div>`;}
+function resetData(){if(confirm('مسح جميع البيانات نهائياً؟')){data={products:[],customers:[],sales:[]};cart=[];save();show('home');}}
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+renderHome();
+</script>
+</body></html>
