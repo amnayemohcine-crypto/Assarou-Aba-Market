@@ -21,9 +21,11 @@ jobs:
           mkdir -p app/src/main/java/com/assarou/abamarket
           mkdir -p app/src/main/res/values
           mkdir -p app/src/main/assets
+          mkdir -p app/src/main/res/drawable
+          cp app/src/main/assets/assarou-header-logo.png app/src/main/res/drawable/assarou_logo.png
 
-          cat > settings.gradle <<'EOF'
-          pluginManagement {
+                     cat > settings.gradle <<'EOF'
+                     pluginManagement {
               repositories {
                   google()
                   mavenCentral()
